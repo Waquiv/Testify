@@ -1,0 +1,24 @@
+:root{
+    --bbc: #FFFDD0;
+    --acg: background-color: rgb(115, 243, 41);
+}
+*{
+}
+body{
+    margin: 0px;
+    background-color: var(--bbc);
+}
+
+.container {
+    display: flex;
+    width: 100vw; /* Full viewport width */
+    height: 100vh; /* Full viewport height */
+  }
+  
+  .section {
+    flex: 1;
+    height: 100%;
+    min-width: 100%; /* To fill the width */
+    background-color: red; /* Adjust background colors as needed */
+    border: 1px solid black; /* Optional: Adding borders for visualization */
+  }
