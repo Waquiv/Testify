@@ -16,7 +16,7 @@ body{
     row-gap: 20px;
 }
 
-.cicky{
+.clicky{
     margin: 0px;
     padding:20px 50px ;
     background-color: rgb(115, 243, 41);
@@ -29,7 +29,7 @@ body{
     transition: all 0.2s;
 }
 
-.cicky:hover{
+.clicky:hover{
     cursor: pointer;
     background-color: rgba(115, 243, 41, 0.785);
     color: aliceblue;
