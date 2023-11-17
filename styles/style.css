@@ -1,9 +1,8 @@
 :root{
     --bbc: #FFFDD0;
-    --acg: background-color: rgb(115, 243, 41);
+    --acg: rgb(115, 243, 41);
 }
-*{
-}
+
 body{
     margin: 0px;
     background-color: var(--bbc);
