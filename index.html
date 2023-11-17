@@ -5,12 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Testify your music taste</title>
 	<link rel="stylesheet" href="styles/style.css">
+	<script defer src="scripts/face-api.min.js"></script>
 </head>
 <body>
 	<body>
 		<div class="vp-container">
 			<div class="loaded-page section">
-				<div class="main page "></div>
+				<div class="main page">
+					<div class="face-show">
+						<video id="video" width="720" height="560" autoplay muted style=""></video>
+					</div>
+				</div>
 			</div>
 			<div class="next-page section">
 				<div class="loading page "></div>
@@ -19,6 +24,8 @@
 				<div class="results page"></div>
 			</div>
 		</div>
-		<script src=""></script>
+
+		<!-- Scripts -->
+		<script defer src="scripts/faceRec.js"></script>
 </body>
 </html>

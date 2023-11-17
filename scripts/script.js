@@ -1,4 +1,4 @@
-const p1=document.querySelector('.main');
+/*const p1=document.querySelector('.main');
 console.log(`teh mainis ${p1}`)
 
 const flag=false;
@@ -16,4 +16,4 @@ main.addEventListener("animationend", (event) => {
     main.remove()
     main.classList.remove('animate')
     dp.appendChild(main)
-})
+})*/

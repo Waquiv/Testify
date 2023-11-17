@@ -1,12 +1,26 @@
 :root{
     --bbc: #FFFDD0;
-    --acg: background-color: rgb(115, 243, 41);
+    --acg: rgb(115, 243, 41);
 }
 *{
 }
 body{
     margin: 0px;
     background-color: var(--bbc);
+}
+
+canvas{
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1; /* Set a higher z-index to overlay the video */
+}
+video{}
+
+.face-show{
+	width: 720px;
+	height: 560px;
+	border: solid 5px green;
 }
 
 .vp-container {
