@@ -1,9 +1,8 @@
 :root{
     --bbc: #FFFDD0;
-    --acg: background-color: rgb(115, 243, 41);
+    --acg: rgb(115, 243, 41);
 }
-*{
-}
+
 body{
     margin: 0px;
     background-color: var(--bbc);
@@ -13,6 +12,7 @@ body{
     display: flex;
     width: 100vw; /* Full viewport width */
     height: 100vh; /* Full viewport height */
+    overflow: hidden;
   }
   
   .section {
