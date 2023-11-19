@@ -26,6 +26,7 @@ function startVideo(){
     console.error('Error accessing the camera:', error);
     });
 }
+let inter;
 
 //function that draws canvas on top of teh video element. called when video is played
 video.addEventListener('play', (event)=>{
@@ -40,11 +41,11 @@ video.addEventListener('play', (event)=>{
     faceapi.matchDimensions(canvas, displaySize)
 
     //async function that is called every 100ms and draws landmarks, expressions and detections everytime called
-    setInterval(async () => {
+    inter = setInterval(async () => {
         //stores detections in a variable and logs the variable to the console
         const detections = await faceapi.detectAllFaces(video,
             new faceapi.TinyFaceDetectorOptions()).withFaceLandmarks().withFaceExpressions()
-            console.log(detections);
+            console.log(JSON.stringify(detections[0]['expressions']));
             //resize the detections to draw on canvas
             const resizedDetections = faceapi.resizeResults(detections, displaySize)
 
@@ -53,6 +54,9 @@ video.addEventListener('play', (event)=>{
             //draws the result on canvs
             faceapi.draw.drawDetections(canvas, resizedDetections)
             faceapi.draw.drawFaceLandmarks(canvas, resizedDetections)
-            faceapi.draw.drawFaceExpressions(canvas, resizedDetections)  
-    }, 100)
+            faceapi.draw.drawFaceExpressions(canvas, resizedDetections)
+    }, 1000)
+    //stops the inter val 
+    //clearInterval(inter)
 })
+
