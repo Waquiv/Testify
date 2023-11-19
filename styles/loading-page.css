@@ -1,23 +1,28 @@
 @import "general.css";
 
 .loading{
+    padding: 10% 0%;
+    background: 
+                radial-gradient(circle at bottom, var(--gcol1), transparent 70%),
+                radial-gradient(ellipse at top left, var(--gcol2), transparent),
+                radial-gradient(ellipse at top right, var(--gcol3), transparent);
 }
 
 .loading-icon{
-    padding:  20% 37.5% 0%;
+    padding:  0% 37.5%;
     box-sizing: border-box;
     width: 100%;
     height: auto;
 }
 
 .loading-text{
-    /* display: absolute;
-    margin: 20vh 20vw auto; */
     width: 100%;
     height: 60%;
     padding: 5% 10% 10% 10%;
     box-sizing: border-box;
-    justify-content: left;
+    font-family: var(--p-font);
+    font-weight: bold;
+    color: var(--pcol);
 }
 
 .loading-text p{
