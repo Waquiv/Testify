@@ -1,3 +1,13 @@
+:root{
+    --bbc: #F5F7F8;
+    --conc: #F4CE14;
+    --ttc: #225443;
+    --pcol: #225443;
+
+    --p-font: 'inter' ;
+    --t-font: 'Aclonica';
+}
+
 body{
     margin: 0px;
 }
