@@ -5,6 +5,22 @@ const main = document.querySelector('.face-show')
 //get the height and width of the container using
 //const computedWidth = window.getComputedStyle(myDiv).getPropertyValue('width');
 
+/*/ Function to set video dimensions
+function setVideoSize() {
+    const containerWidth = video.parentElement.clientWidth; // Get container width
+    video.width = containerWidth // Set video width to container width
+    console.log(video.width)
+    video.height = containerWidth // Set video width to container width
+    console.log(video.height)
+  
+  }
+  
+  // Call setVideoSize when the window is resized
+  window.addEventListener('resize', setVideoSize);
+  
+  // Set initial size when the page loads
+  setVideoSize();*/
+
 
 //promise to check all models have been succesfully loaded.starts video when loaded
 Promise.all([
@@ -26,6 +42,7 @@ function startVideo(){
     console.error('Error accessing the camera:', error);
     });
 }
+
 let inter;
 
 //function that draws canvas on top of teh video element. called when video is played
@@ -40,6 +57,8 @@ video.addEventListener('play', (event)=>{
     //have faceapi make the canvas based on the displaysize object
     faceapi.matchDimensions(canvas, displaySize)
 
+
+    let i =0
     //async function that is called every 100ms and draws landmarks, expressions and detections everytime called
     inter = setInterval(async () => {
         //stores detections in a variable and logs the variable to the console
@@ -55,6 +74,9 @@ video.addEventListener('play', (event)=>{
             faceapi.draw.drawDetections(canvas, resizedDetections)
             faceapi.draw.drawFaceLandmarks(canvas, resizedDetections)
             faceapi.draw.drawFaceExpressions(canvas, resizedDetections)
+            i++
+            console.log(i)
+            if(i>=10){clearInterval(inter); canvas.getContext('2d').clearRect(0,0, canvas.width, canvas.height)}
     }, 1000)
     //stops the inter val 
     //clearInterval(inter)
