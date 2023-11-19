@@ -15,8 +15,16 @@ Promise.all([
 ]).then(startVideo)
 
 //function to start video
-function startVideo() {
-    navigator.getUserMedia({video:{}}, stream => video.srcObject = stream, err=> console.log(err))
+function startVideo(){
+    // Request access to the user's camera
+    navigator.mediaDevices.getUserMedia({ video: true })
+    .then(stream => {
+    // Set the video stream as the source for the video element
+    video.srcObject = stream;
+    })
+    .catch(error => {
+    console.error('Error accessing the camera:', error);
+    });
 }
 
 //function that draws canvas on top of teh video element. called when video is played

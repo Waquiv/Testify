@@ -17,3 +17,20 @@ main.addEventListener("animationend", (event) => {
     main.classList.remove('animate')
     dp.appendChild(main)
 })*/
+
+// Get the video element
+const video = document.getElementById('video');
+
+function startVideo(){
+    // Request access to the user's camera
+    navigator.mediaDevices.getUserMedia({ video: true })
+    .then(stream => {
+    // Set the video stream as the source for the video element
+    video.srcObject = stream;
+    })
+    .catch(error => {
+    console.error('Error accessing the camera:', error);
+    });
+}
+
+startVideo()
