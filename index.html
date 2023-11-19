@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Testify your music taste</title>
 	<link rel="stylesheet" href="styles/main-page.css">
+	<link rel="stylesheet" href="styles/style.css">
+	<script defer src="scripts/face-api.min.js"></script>
 </head>
 <body>
 	<body>
@@ -23,6 +25,8 @@
 						<div class="button-container">
 							<button class="click">Get Started</button>
 						</div>
+					<div class="face-show">
+						<video id="video" width="720" height="560" autoplay muted style=""></video>
 					</div>
 				</div>
 			</div>
@@ -33,6 +37,8 @@
 				<div class="results page"></div>
 			</div>
 		</div>
-		<script src=""></script>
+
+		<!-- Scripts -->
+		<script defer src="scripts/faceRec.js"></script>
 </body>
 </html>
