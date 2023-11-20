@@ -1,4 +1,4 @@
-/*const iframe= document.querySelector("iframe");
+const iframe= document.querySelector("iframe");
 
 const clicky=document.querySelector(".clicky");
 console.log(clicky)
@@ -10,8 +10,7 @@ clicky.addEventListener('click', function(){
     //console.log(rand)
     iframe.src=`https://open.spotify.com/embed/track/${arr[rand]}?utm_source=generator`
 })
-Code to display normal spotify embed without controls
-*/
+//Code to display normal spotify embed without controls
 
 
 //plays the uri track in the "embed-iframe div"

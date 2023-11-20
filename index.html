@@ -7,6 +7,10 @@
 	<link rel="stylesheet" href="styles/main-page.css">
 	<link rel="stylesheet" href="styles/rec.css">
 	<link rel="stylesheet" href="styles/loading-page.css">
+	<script defer src="scripts/face-api.min.js"></script>
+	<script src="">
+		
+	</script>
 </head>
 <body>
 	<body>
@@ -20,65 +24,95 @@
 					<div class="main-primary">
 						<div class="interact-container">
 							<div class="tagline-container">
-								<div class="tagline-box">
-									<p class="tagline">h9ea doiwanijD bidwba 8wiubd diuw  wydba duw  wudajb idabiwj</p>
+								<div class="tagline-box ">
+									<p class="tagline " >h9ea doiwanijD bidwba 8wiubd diuw  wydba duw I amm just spamming random words lol wudajb idabiwj</p>
 								</div>
 							</div>
 							<div class="button-container">
-								<button class="click">Get Started</button>
+								<button class="click" >Get Started</button>
 							</div>
 						</div>
-						<div class="face-show">
-							<video id="video"  autoplay muted style=""></video>
+						<div class="face-container">
+							<div class="face-show">
+								<video id="video"  autoplay muted style=""></video>
+							</div>
 						</div>
 					</div>
+					<script>
+						
+					</script>
 				</div>
 			</div> 
 			<div class="next-page section">
-				<div class="loading page">
-					<div class="inner-container">
-						<div class="loading-image">
-							<div class="outer-circle">
-								<div class="inner-circle">
-									<div id="percent">100%</div>
-									<script>
-										let num=document.getElementById('percent');
-										let count=0;
-										const x=105;
-										console.log(num.textContent);
-										setInterval(() => {
-											count += 1;
-											if (count>100){clearInterval()}
-											else{num.textContent=`${count}%`}
-										}, x);
-									</script>
+				<div class="loading page" id="p2">
+					<div class="bg-fill">
+						<div class="inner-container">
+							<div class="loading-image">
+								<div class="outer-circle">
+									<div class="inner-circle">
+										<div id="percent">100%</div>
+										<script>
+											let num=document.getElementById('percent');
+											let count=0;
+											const x=105;
+											console.log(num.textContent);
+											setInterval(() => {
+												count += 1;
+												if (count>100){clearInterval()}
+												else{num.textContent=`${count}%`}
+											}, x);
+										</script>
+									</div>
 								</div>
+								<svg viewBox="0 0 100 100">
+									<circle cx="50" cy="50" r="45" stroke-linecap="round" />
+								</svg>
 							</div>
-							<svg viewBox="0 0 100 100">
-								<circle cx="50" cy="50" r="45" stroke-linecap="round" />
-							</svg>
-						</div>
-						<div class="loading-text">
-							<div class="banner"><h2>Loading...</h2></div>
-							<div class="loading-p">
-								<div class="p-container">
-									<p>Seems like you might really dig some Radiohead...</p>
-									<p>you already have them as your top artist huh? :(</p>
-									<p>Just kidding, that would be weird.</p>
-									<p>But seriously though, go outside once in a while.</p>
-									<p>Anyways, here are your results. Have a nice day!</p>
+							<div class="loading-text">
+								<div class="banner"><h2>Loading...</h2></div>
+								<div class="loading-p">
+									<div class="p-container p-load-down">
+										<p>Seems like you might really dig some Radiohead...</p>
+										<p>you already have them as your top artist huh? :(</p>
+										<p>Just kidding, that would be weird.</p>
+										<p>But seriously though, go outside once in a while.</p>
+										<p>Anyways, here are your results. Have a nice day!</p>
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
+					
 				</div>
 			</div>
 			<div class="buffer-page section">
-				<div class="results page"></div>
+				<div class="results page">
+					<div class="trial"></div>
+				</div>
 			</div>
 		</div>
 
 		<!-- Scripts -->
-		<script defer src=""></script>
+		<!-- <script>
+			let isShutter=false;
+			const button=document.querySelector(".click");
+			button.onclick= (event) =>{
+			if(!isShutter){
+				button.innerText="";
+				button.classList.add("button-click");
+				const tag = document.querySelector('.tagline-box');
+				tag.classList.add('tagline-fadeout')
+				console.log(tag.classList);
+				startVideo();
+				isShutter=ture;
+			}
+			else{
+				console.log('inside else');
+				// stopVideo();
+				// clearInterval(inter);
+			}
+			} -->
+		</script>
+		<script defer src="scripts/faceRec.js"></script>
 </body>
 </html>

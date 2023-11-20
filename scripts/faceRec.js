@@ -29,7 +29,7 @@ Promise.all([
     faceapi.nets.faceLandmark68Net.loadFromUri('/models'),
     faceapi.nets.faceRecognitionNet.loadFromUri('/models'),
     faceapi.nets.faceExpressionNet.loadFromUri('/models')
-]).then(startVideo)
+]).then(()=>{console.log("loaded");})
 
 //function to start video
 function startVideo(){
@@ -55,44 +55,22 @@ function getVideoAspectRatio() {
     return aspectRatio;
 }
 let inter;
-
+let canvas;
+let displaySize;
 
 //function that draws canvas on top of teh video element. called when video is played
 video.addEventListener('play', (event)=>{
 
     //creates a canvas for drawing face recognition
-    const canvas = faceapi.createCanvasFromMedia(video)
+    canvas = faceapi.createCanvasFromMedia(video)
     //attach canvas to the container
     main.append(canvas)
     //take a variabel displaysize as an object with the width and height of video
-    const displaySize = { width: containerHeight*getVideoAspectRatio(), height: containerHeight }
+    displaySize = { width: containerHeight*getVideoAspectRatio(), height: containerHeight }
     //have faceapi make the canvas based on the displaysize object
     faceapi.matchDimensions(canvas, displaySize)
     canvas.style.left=`-${(canvas.width-containerWidth)/2}px`
-
-    let i =0
-    //async function that is called every 100ms and draws landmarks, expressions and detections everytime called
-    inter = setInterval(async () => {
-        //stores detections in a variable and logs the variable to the console
-        clearInterval(inter)
-        const detections = await faceapi.detectAllFaces(video,
-            new faceapi.TinyFaceDetectorOptions()).withFaceLandmarks().withFaceExpressions()
-            console.log(JSON.stringify(detections[0]['expressions']));
-            //resize the detections to draw on canvas
-            const resizedDetections = faceapi.resizeResults(detections, displaySize)
-
-            //clears the canvas before drawing next time
-            canvas.getContext('2d').clearRect(0,0, canvas.width, canvas.height)
-            //draws the result on canvs
-            faceapi.draw.drawDetections(canvas, resizedDetections)
-            faceapi.draw.drawFaceLandmarks(canvas, resizedDetections)
-            faceapi.draw.drawFaceExpressions(canvas, resizedDetections)
-            // i++
-            console.log(i)
-            if(i==0){clearInterval(inter); canvas.getContext('2d').clearRect(0,0, canvas.width, canvas.height)}
-    }, 100)
-    //stops the inter val 
-    //clearInterval(inter)
+    
 })
 
 function stopVideo() {
@@ -102,3 +80,41 @@ function stopVideo() {
     tracks.forEach(track => track.stop());
     video.srcObject = null;
   }
+
+let isShutter=false;
+const button=document.querySelector(".click");
+
+button.onclick= (event) =>{
+    if(!isShutter){
+        button.innerText="";
+        button.classList.add("button-click");
+        const tag = document.querySelector('.tagline-box');
+        tag.classList.add('tagline-fadeout')
+        console.log(tag.classList);
+        startVideo();
+        isShutter=true;
+    }
+    else{
+        console.log('inside else');
+        // stopVideo();
+        // clearInterval(inter);
+
+        //async function that is called every 100ms and draws landmarks, expressions and detections everytime called
+        inter = setInterval(async () => {
+            //stores detections in a variable and logs the variable to the console
+            // clearInterval(inter)
+            const detections = await faceapi.detectAllFaces(video,
+                new faceapi.TinyFaceDetectorOptions()).withFaceLandmarks().withFaceExpressions()
+                console.log(JSON.stringify(detections[0]['expressions']));
+                //resize the detections to draw on canvas
+                const resizedDetections = faceapi.resizeResults(detections, displaySize)
+    
+                //clears the canvas before drawing next time
+                canvas.getContext('2d').clearRect(0,0, canvas.width, canvas.height)
+                //draws the result on canvs
+                faceapi.draw.drawDetections(canvas, resizedDetections)
+                faceapi.draw.drawFaceLandmarks(canvas, resizedDetections)
+                faceapi.draw.drawFaceExpressions(canvas, resizedDetections)
+        }, 100)
+    }
+}

@@ -2,28 +2,35 @@
 
 .loading{
     background-color: var(--bbc);
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    /* background: url('/images/background/'); */   
+}
+.bg-fill{
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url('/nob.png');
-    background-size: 50%
-    /* background: 
-                radial-gradient(circle at bottom, var(--gcol1), transparent 70%),
-                radial-gradient(ellipse at top left, var(--gcol2), transparent),
-                radial-gradient(ellipse at top right, var(--gcol3), transparent); */
+    background: url('/images/background/layered-waves-small.svg');
+    background-repeat: no-repeat;
+    background-size:100% ;
+    background-position-x: center;
+    background-position-y: bottom;
 }
 
 .inner-container{
     width: 75%;
     height: 85%;
-    box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.20);
+    /* box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.20); */
 }
 
 .loading-image{
     width: 100%;
     height: 30%;
     margin-top: 2%;
-    background-color: var(--bbc);
+    /* background-color: var(--bbc); */
     display: flex;
     justify-content: center;
     position: relative;
@@ -33,7 +40,8 @@
     height: 100%;
     border-radius: 50%;
     aspect-ratio: 1/1;
-    box-shadow: 6px 6px 10px 0px rgba(0, 0, 0, 0.20), -6px -6px 10px -1px rgb(255, 255, 255) ;
+    background-color: var(--pcol);
+    box-shadow: inset 0px 0px 3px 3px rgba(0, 0, 0, 0.25);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -46,25 +54,25 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: inset 6px 6px 10px 0px rgba(0, 0, 0, 0.20);
+    /* box-shadow: inset 6px 6px 10px 0px rgba(0, 0, 0, 0.20); */
 }
 #percent{
     height: 80%;
     width: 80%;
     border-radius: 50%;
     /* background-color: #ebebeb; */
-    background-color: var(--conc);
+    background-color: var(--bbc);
     display: grid;
     place-items: center;
     font-family: 'arial';
     font-weight: bolder;
     font-size:1.8rem;
-    color: rgba(0, 0, 0, 0.789);
+    color: var(--ttc);
 }
 circle{
     fill: none;
     /* stroke: #BBE2D6; */
-    stroke: var(--ttc);
+    stroke: var(--conc);
     stroke-width: 10px;
     stroke-dasharray: 279;
     stroke-dashoffset: 270;
@@ -74,22 +82,13 @@ circle{
 .loading-text{
     width: 100%;
     height: 70%;
-    background-color: var(--bbc);
+    /* background-color: var(--bbc); */
     font-family: 'arial';
-    /* width: 100%;
-    height: 60%;
-    padding: 5% 10% 10% 10%;
-    box-sizing: border-box;
-    font-family: var(--p-font);
-    font-weight: bold;
-    font-size: 1rem;
-    color: var(--pcol); */
 }
 .banner h2{
     margin-top: 0.60em;
     padding: 0.60em;
     /* background-color: #ebebeb; */
-    background-color: var(--conc);
 }
 .loading-p{overflow: hidden;}
 
@@ -111,10 +110,12 @@ circle{
     font-weight: 600;
     word-spacing: 0.25rem;
     letter-spacing: 0.05rem;
-    color: rgba(61, 61, 61, 0.718);
+    color: var(--ttc);
 }
 
 
+
+/* animation utility classes and presets */
 
 @keyframes TextLoadDown {
     0%{
