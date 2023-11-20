@@ -17,6 +17,11 @@
 body{
     margin: 0px;
 }
+svg{
+    rotate: 274deg;
+    position: absolute;
+    height: 100%;
+}
 
 p{
     margin: 0px;
