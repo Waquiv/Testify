@@ -5,6 +5,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background: url('/nob.png');
+    background-size: 50%
     /* background: 
                 radial-gradient(circle at bottom, var(--gcol1), transparent 70%),
                 radial-gradient(ellipse at top left, var(--gcol2), transparent),
@@ -50,17 +52,19 @@
     height: 80%;
     width: 80%;
     border-radius: 50%;
-    background-color: #ebebeb;
+    /* background-color: #ebebeb; */
+    background-color: var(--conc);
     display: grid;
     place-items: center;
     font-family: 'arial';
     font-weight: bolder;
     font-size:1.8rem;
-    color: rgba(0, 0, 0, 0.512);
+    color: rgba(0, 0, 0, 0.789);
 }
 circle{
     fill: none;
-    stroke: #BBE2D6;
+    /* stroke: #BBE2D6; */
+    stroke: var(--ttc);
     stroke-width: 10px;
     stroke-dasharray: 279;
     stroke-dashoffset: 270;
@@ -84,7 +88,8 @@ circle{
 .banner h2{
     margin-top: 0.60em;
     padding: 0.60em;
-    background-color: #ebebeb;
+    /* background-color: #ebebeb; */
+    background-color: var(--conc);
 }
 .loading-p{overflow: hidden;}
 
