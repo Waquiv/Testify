@@ -74,6 +74,7 @@ video.addEventListener('play', (event)=>{
     //async function that is called every 100ms and draws landmarks, expressions and detections everytime called
     inter = setInterval(async () => {
         //stores detections in a variable and logs the variable to the console
+        clearInterval(inter)
         const detections = await faceapi.detectAllFaces(video,
             new faceapi.TinyFaceDetectorOptions()).withFaceLandmarks().withFaceExpressions()
             console.log(JSON.stringify(detections[0]['expressions']));
@@ -86,11 +87,18 @@ video.addEventListener('play', (event)=>{
             faceapi.draw.drawDetections(canvas, resizedDetections)
             faceapi.draw.drawFaceLandmarks(canvas, resizedDetections)
             faceapi.draw.drawFaceExpressions(canvas, resizedDetections)
-            i++
-            // console.log(i)
-            // if(i>=0){clearInterval(inter); canvas.getContext('2d').clearRect(0,0, canvas.width, canvas.height)}
+            // i++
+            console.log(i)
+            if(i==0){clearInterval(inter); canvas.getContext('2d').clearRect(0,0, canvas.width, canvas.height)}
     }, 100)
     //stops the inter val 
     //clearInterval(inter)
 })
 
+function stopVideo() {
+    const stream = video.srcObject;
+    const tracks = stream.getTracks();
+  
+    tracks.forEach(track => track.stop());
+    video.srcObject = null;
+  }
