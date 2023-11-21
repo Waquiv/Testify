@@ -1,33 +1,148 @@
 @import "general.css";
 
 .loading{
-    padding: 10% 0%;
-    background: 
-                radial-gradient(circle at bottom, var(--gcol1), transparent 70%),
-                radial-gradient(ellipse at top left, var(--gcol2), transparent),
-                radial-gradient(ellipse at top right, var(--gcol3), transparent);
+    background-color: var(--bbc);
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    /* background: url('/images/background/'); */   
+}
+.bg-fill-load{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('/images/background/layered-waves-small.svg');
+    background-repeat: no-repeat;
+    background-size:100% ;
+    background-position-x: center;
+    background-position-y: bottom;
 }
 
-.loading-icon{
-    padding:  0% 37.5%;
-    box-sizing: border-box;
+.inner-container{
+    width: 75%;
+    height: 85%;
+    /* box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.20); */
+}
+
+.loading-image{
     width: 100%;
-    height: auto;
+    height: 30%;
+    margin-top: 2%;
+    /* background-color: var(--bbc); */
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.outer-circle{
+    height: 100%;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    background-color: var(--pcol);
+    box-shadow: inset 0px 0px 3px 3px rgba(0, 0, 0, 0.25);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.inner-circle{
+    background-color: var(--bbc);
+    height: 80%;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* box-shadow: inset 6px 6px 10px 0px rgba(0, 0, 0, 0.20); */
+}
+#percent{
+    height: 80%;
+    width: 80%;
+    border-radius: 50%;
+    /* background-color: #ebebeb; */
+    background-color: var(--bbc);
+    display: grid;
+    place-items: center;
+    font-family: 'arial';
+    font-weight: bolder;
+    font-size:1.8rem;
+    color: var(--ttc);
+}
+circle{
+    fill: none;
+    /* stroke: #BBE2D6; */
+    stroke: var(--conc);
+    stroke-width: 10px;
+    stroke-dasharray: 279;
+    stroke-dashoffset: 270;
+    animation: circularProgress 10s ease-in-out 0.5s infinite normal both;
 }
 
 .loading-text{
     width: 100%;
-    height: 60%;
-    padding: 5% 10% 10% 10%;
-    box-sizing: border-box;
-    font-family: var(--p-font);
-    font-weight: bold;
-    font-size: 1rem;
-    color: var(--pcol);
+    height: 70%;
+    /* background-color: var(--bbc); */
+    font-family: 'arial';
+}
+.banner h2{
+    margin-top: 0.60em;
+    padding: 0.60em;
+    /* background-color: #ebebeb; */
+}
+.loading-p{overflow: hidden;}
+
+.p-container{
+    /* transform: translateY(-100%); */
+    animation: TextLoadDown 8s linear 0s infinite normal forwards;
 }
 
-.loading-text p{
-    box-sizing: border-box;
-    width: 100%;
-    padding: 2.5% 0%;
+.p-container p:first-child {
+    margin-top: 0px;
+  }
+  
+  .p-container p:last-child {
+    margin-bottom: 0px;
+  }
+  
+.loading-p p{
+    margin: 0.8em 0.8em;
+    font-weight: 600;
+    word-spacing: 0.25rem;
+    letter-spacing: 0.05rem;
+    color: var(--ttc);
+}
+
+
+
+/* animation utility classes and presets */
+
+@keyframes TextLoadDown {
+    0%{
+        transform: translateY(-100%);
+    }
+    5%, 20%{
+        transform: translateY(-80%);
+    }
+    25%, 40%{
+        transform: translateY(-60%);
+    }
+    45%, 60%{
+        transform: translateY(-40%);
+    }
+    65%, 80%{
+        transform: translateY(-20%);
+    }
+    85%, 100%{
+        transform: translateY(0%);
+    }
+}
+
+@keyframes circularProgress {
+    0%{
+        stroke-dashoffset: 279;
+    }
+    100%{
+        stroke-dashoffset: 0;
+    }
 }

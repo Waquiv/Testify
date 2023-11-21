@@ -5,42 +5,141 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Testify your music taste</title>
 	<link rel="stylesheet" href="styles/main-page.css">
+	<link rel="stylesheet" href="styles/rec.css">
 	<link rel="stylesheet" href="styles/loading-page.css">
+	<link rel="stylesheet" href="styles/results-page.css">
+	<script src="https://open.spotify.com/embed/iframe-api/v1" async></script>
+	<script defer src="scripts/face-api.min.js"></script>
+	<script src="">
+		
+	</script>
 </head>
 <body>
-	<body>
-		<div class="vp-container">
-			<!-- <div class="loaded-page section">
-				<div class="main page ">
-					<div class="main-title">Testify</div>
-					<div class="main-mid">
-						<div class="camera-feedback-replacement"></div>
-						<div class="camera-feedback"></div>
-					</div>
-					<div class="start-text">I can recommend you music on how your expression</div>
-					<button class="btn-main-page">Get Started!</button>
+	<div class="vp-container">
+		<div class="loaded-page section">
+			<!--Main Page-->
+			<div class="main page ">
+				<div class="heading-container">
+					<h1 class="title">Testify</h1>
 				</div>
-			</div> -->
-			<div class="next-page section">
-				<div class="loading page">
-					<img class="loading-icon" src="images/icons/loading.png" alt="loading-icon">
-					<div class="loading-text">
-						<p>Loading your recommendations...</p>
-						<p>Hmmm... you look kinda miserable...</p>
-						<p>When was the last time someone of the opposite approached you?</p>
-						<p>I'mma keep it real with you fam, I can sense some divorced dad rock somewhere in there as well.</p>
-						<p>Seems like you might really dig some Radiohead.</p>
-						<p>Or do you already have them as your top artist huh? :(</p>
-						<p>Just kidding, that would be weird.</p>
-						<p>But seriously though, go outside once in a while.</p>
-						<p>Anyways, here are your results. Have a nice day!</p>
+				<div class="main-primary">
+					<div class="interact-container">
+						<div class="tagline-container">
+							<div class="tagline-box ">
+								<p class="tagline " >h9ea doiwanijD bidwba 8wiubd diuw  wydba duw I amm just spamming random words lol wudajb idabiwj</p>
+							</div>
+						</div>
+						<div class="button-container">
+							<button class="click" >Get Started</button>
+						</div>
+					</div>
+					<div class="face-container">
+						<div class="face-show">
+							<video id="video"  autoplay muted style=""></video>
+						</div>
 					</div>
 				</div>
+				<script>
+					
+				</script>
 			</div>
-			<div class="buffer-page section">
-				<div class="results page"></div>
+		</div> 
+		<div class="next-page section">
+			<div class="loading page" id="p2">
+				<div class="bg-fill-load">
+					<div class="inner-container">
+						<div class="loading-image">
+							<div class="outer-circle">
+								<div class="inner-circle">
+									<div id="percent">100%</div>
+									<script>
+										let num=document.getElementById('percent');
+										let count=0;
+										const x=105;
+										console.log(num.textContent);
+										// setInterval(() => {
+										// 	count += 1;
+										// 	if (count>100){clearInterval()}
+										// 	else{num.textContent=`${count}%`}
+										// }, x);
+									</script>
+								</div>
+							</div>
+							<svg viewBox="0 0 100 100">
+								<circle cx="50" cy="50" r="45" stroke-linecap="round" />
+							</svg>
+						</div>
+						<div class="loading-text">
+							<div class="banner"><h2>Loading...</h2></div>
+							<div class="loading-p">
+								<div class="p-container p-load-down">
+									<p>Seems like you might really dig some Radiohead...</p>
+									<p>you already have them as your top artist huh? :(</p>
+									<p>Just kidding, that would be weird.</p>
+									<p>But seriously though, go outside once in a while.</p>
+									<p>Anyways, here are your results. Have a nice day!</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
 			</div>
 		</div>
-		<script src=""></script>
+		<div class="buffer-page section">
+			<div class="results page" id="p3">
+				<div class="bg-fill-res">
+					<div class="inner-cont-result">
+						<div class="iframe-container">
+							<div id="embed-iframe"></div>
+						</div>
+						<div class="result-text">
+							<p id="result">This is teh result who knows how you did</p>
+						</div>
+						<div class="social-container">
+							<div class="socials">
+								<div class="thanks">
+									<p>Thanks for feeding us your facial data UwU</p>
+								</div>
+								<div class="connect">
+									<div class="icons">
+										<img src="images/icons/github.svg" alt="">
+										<img src="images/icons/linkedin.svg" alt="">
+									</div>
+									<p>Connect with us</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Scripts -->
+	
+	<!-- <script>
+		let isShutter=false;
+		const button=document.querySelector(".click");
+		button.onclick= (event) =>{
+		if(!isShutter){
+			button.innerText="";
+			button.classList.add("button-click");
+			const tag = document.querySelector('.tagline-box');
+			tag.classList.add('tagline-fadeout')
+			console.log(tag.classList);
+			startVideo();
+			isShutter=ture;
+		}
+		else{
+			console.log('inside else');
+			// stopVideo();
+			// clearInterval(inter);
+		}
+		} -->
+	</script>
+	<script defer src="scripts/trial/dependencies.js"></script>
+	<script defer src="scripts/trial/face-detect.js"></script>
+	<script src="scripts/spotify-api.js"></script>
 </body>
 </html>
