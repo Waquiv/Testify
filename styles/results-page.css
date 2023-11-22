@@ -1,5 +1,11 @@
 @import "general.css";
 
+.results{
+    width: 100%;
+    height: 100%;
+    background-color: var(--prc);
+}
+
 .bg-fill-res{
     width: 100%;
     height: 100%;
