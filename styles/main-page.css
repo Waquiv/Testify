@@ -1,9 +1,9 @@
-@import url("general.css");
+@import url('general.css');
 
 .main{
     width: 100%;
     height: 100%;
-    background-color: var(--bbc);
+    background-color: var(--prc);
 }
 
 .heading-container{
@@ -15,13 +15,13 @@
 .title{
     font-family: var(--t-font);
     margin: 0px;
-    color: var(--ttc);
+    color: var(--ccc);
     font-size: 4rem;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .main-primary{
-    background: url("/images/background/main-page-background.png") ;
-    background-color: var(--bbc);
+    /* background: url("/images/repeatPattern.png") ; */
+    background-color: var(--prc);
     position: relative;
     width: 100%;
     height: 100%;
@@ -55,9 +55,9 @@
     overflow: hidden;
 }
 .tagline{
-    font-family: var(--t-font);
-    font-weight: 700;
-    color: var(--ttc);
+    font-family: var(--p-font);
+    font-weight: 500;
+    color: var(--ccc);
     letter-spacing: .1em;
     text-align: center;
 }
@@ -72,10 +72,9 @@
     background-color: var(--acc);
     font-family: 'montserrat';
     font-weight: bold;
-    color: var(--ttc);
+    color: var(--ccc);
     padding: 20px 35px;
     box-shadow: 0px 0px 5px var(--acc);
-    
 }
 
 /* animation utility classes and presets */
@@ -109,9 +108,8 @@
     to{
         border: none;
         border-radius: 40px;
-        background-color: var(--ttc);
+        background-color: var(--ccc);
         padding: 40px 40px;
-        box-shadow: 0px 0px 10px 0px var(--bbc);
-        opacity: 0.5;
+        box-shadow: 0px 0px 10px 0px var(--prc);
     }
 }

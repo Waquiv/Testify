@@ -40,14 +40,14 @@
     height: 100%;
     border-radius: 50%;
     aspect-ratio: 1/1;
-    background-color: var(--pcol);
+    background-color: var(--bc1);
     box-shadow: inset 0px 0px 3px 3px rgba(0, 0, 0, 0.25);
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .inner-circle{
-    background-color: var(--bbc);
+    background-color: var(--prc);
     height: 80%;
     border-radius: 50%;
     aspect-ratio: 1/1;
@@ -61,18 +61,18 @@
     width: 80%;
     border-radius: 50%;
     /* background-color: #ebebeb; */
-    background-color: var(--bbc);
+    background-color: var(--prc);
     display: grid;
     place-items: center;
     font-family: 'arial';
     font-weight: bolder;
     font-size:1.8rem;
-    color: var(--ttc);
+    color: var(--ccc);
 }
 circle{
     fill: none;
     /* stroke: #BBE2D6; */
-    stroke: var(--conc);
+    stroke: var(--acc);
     stroke-width: 10px;
     stroke-dasharray: 279;
     stroke-dashoffset: 270;
@@ -110,7 +110,7 @@ circle{
     font-weight: 600;
     word-spacing: 0.25rem;
     letter-spacing: 0.05rem;
-    color: var(--ttc);
+    color: var(--ccc);
 }
 
 
