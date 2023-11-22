@@ -55,7 +55,7 @@
     overflow: hidden;
 }
 .tagline{
-    font-family: var(--p-font);
+    font-family: var(--t-font);
     font-weight: 500;
     color: var(--ccc);
     letter-spacing: .1em;
@@ -70,8 +70,8 @@
     border: none;
     border-radius: 10px;
     background-color: var(--acc);
-    font-family: 'montserrat';
-    font-weight: bold;
+    font-family: var(--rp-font);
+    font-weight: 700;
     color: var(--ccc);
     padding: 20px 35px;
     box-shadow: 0px 0px 5px var(--acc);

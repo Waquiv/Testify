@@ -64,8 +64,8 @@
     background-color: var(--prc);
     display: grid;
     place-items: center;
-    font-family: 'arial';
-    font-weight: bolder;
+    font-family: var(--rp-font);
+    font-weight: 600;
     font-size:1.8rem;
     color: var(--ccc);
 }
@@ -83,7 +83,7 @@ circle{
     width: 100%;
     height: 70%;
     /* background-color: var(--bbc); */
-    font-family: 'arial';
+    font-family: var(--lp-font);
 }
 .banner h2{
     margin-top: 0.60em;
