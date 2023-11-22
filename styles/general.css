@@ -1,17 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Aclonica&family=Lato&family=Montserrat:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:wght@700&family=Montserrat:wght@600;700&family=Sometype+Mono:wght@700&display=swap');
 
 :root{
     --bbc: #010101;
-    --conc: #1DB954;
+    --acc: #1DB954;
     --ttc: #FFFFFF;
-    --pcol: #B2F6CA;
-    --gcol1: #3FF3FF;
-    --gcol2: #FFDB28;
-    --gcol3: #00F8A5;
+    /* --pcol: #B2F6CA; */
 
-    --p-font: 'Lato';
-    --st-font: 'Monserrat';
-    --t-font: 'Aclonica';
+    --lp-font: 'Courier Prime';
+    --rp-font: 'Monserrat';
+    --t-font: 'Sometype Mono';
 }
 
 body{

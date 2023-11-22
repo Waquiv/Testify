@@ -1,12 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Aclonica&family=Inter:wght@200;300;400;500;600;700;800;900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,700;1,600&display=swap');
-
-
-
+@import url("general.css");
 
 .main{
     width: 100%;
     height: 100%;
-    background-color: black;
+    background-color: var(--bbc);
 }
 
 .heading-container{
@@ -23,11 +20,11 @@
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .main-primary{
-    /* background: url("/images/repeatPattern.png") ; */
-    background-color: #000000;
+    background: url("/images/background/main-page-background.png") ;
+    background-color: var(--bbc);
     position: relative;
     width: 100%;
-    height: 85%;
+    height: 100%;
 }
 .interact-container{
     position: absolute;
@@ -58,11 +55,11 @@
     overflow: hidden;
 }
 .tagline{
-    font-family: var(--p-font);
-    font-weight: 500;
-    color: aliceblue;
+    font-family: var(--t-font);
+    font-weight: 700;
+    color: var(--ttc);
     letter-spacing: .1em;
-    text-align: left;
+    text-align: center;
 }
 .button-container{
     height: 33%;
@@ -72,12 +69,12 @@
 .click{
     border: none;
     border-radius: 10px;
-    background-color: #1DB954;
+    background-color: var(--acc);
     font-family: 'montserrat';
     font-weight: bold;
-    color: #FFFFFF;
+    color: var(--ttc);
     padding: 20px 35px;
-    box-shadow: 0px 0px 5px#1DB954;
+    box-shadow: 0px 0px 5px var(--acc);
     
 }
 
@@ -105,15 +102,16 @@
         width: 68px;
         height: 16px;
         border-radius: 5px;
-        background-color: #1DB954;
+        background-color: var(--acc);
         padding: 28px 69px;
-        box-shadow: 5px 5px #1DB954;
+        box-shadow: 5px 5px var(--acc);
     }
     to{
         border: none;
         border-radius: 40px;
-        background-color: #1db954a5;
+        background-color: var(--ttc);
         padding: 40px 40px;
-        box-shadow: 0px 0px 10px 0px #ffffff66;
+        box-shadow: 0px 0px 10px 0px var(--bbc);
+        opacity: 0.5;
     }
 }
