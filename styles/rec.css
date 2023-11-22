@@ -8,7 +8,7 @@ canvas{
 	z-index: 1; /* Set a higher z-index to overlay the video */
 }
 .face-container{
-	width: 100%;
+	width: 94.5%;
 	height: 100%;
 	display: flex;
 	justify-content: center;
