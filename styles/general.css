@@ -4,6 +4,7 @@
     --prc: #010101;
     --acc: #1DB954;
     --ccc: #FFFFFF;
+    --bc1: #B2F6CA;
 
     --lp-font: 'Courier Prime';
     --rp-font: 'Monserrat';
@@ -37,5 +38,5 @@ p{
 .page{
     width: 100%;
     height: 100%;
-    background-color: var(--bbc);
+    background-color: var(--prc);
 }
