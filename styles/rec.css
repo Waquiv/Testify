@@ -8,12 +8,13 @@ canvas{
 	z-index: 1; /* Set a higher z-index to overlay the video */
 }
 .face-container{
-	width: 94.5%;
+	width: 100%;
 	height: 100%;
 	display: flex;
 	justify-content: center;
 }
 .face-show{
+	border-radius: 2%;
     position: relative;
 	width: 90%;
 	height: 100%;
