@@ -6,9 +6,9 @@
     --ccc: #FFFFFF;
     --bc1: #B2F6CA;
 
-    --lp-font: 'Courier Prime';
-    --rp-font: 'Monserrat';
-    --t-font: 'Sometype Mono';
+    --lp-font: 'Courier Prime', monospace;
+    --rp-font: 'Montserrat', sans-serif;
+    --t-font: 'Sometype Mono', monospace;
 }
 
 body{
@@ -27,7 +27,7 @@ p{
 .vp-container{
     width: 100vw;
     height: 100vh;
-    overflow: hidden;
+    overflow: visible;
 }
 
 .section{
