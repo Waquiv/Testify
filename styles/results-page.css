@@ -78,6 +78,7 @@
 }
 
 .connect p{
+    color: var(--ccc);
     font-family: var(--rp-font);
     font-weight: 600;
     font-size: 10px;
